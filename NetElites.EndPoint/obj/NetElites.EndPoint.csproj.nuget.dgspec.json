@@ -1,0 +1,481 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.EndPoint\\NetElites.EndPoint.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj",
+        "projectName": "NetElites.Application",
+        "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj",
+        "packagesPath": "C:\\Users\\Hi tech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hi tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Comman\\NetElites.Comman.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Comman\\NetElites.Comman.csproj"
+              },
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Comman\\NetElites.Comman.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Comman\\NetElites.Comman.csproj",
+        "projectName": "NetElites.Comman",
+        "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Comman\\NetElites.Comman.csproj",
+        "packagesPath": "C:\\Users\\Hi tech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Comman\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hi tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj",
+        "projectName": "NetElites.Doamin",
+        "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj",
+        "packagesPath": "C:\\Users\\Hi tech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hi tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.EndPoint\\NetElites.EndPoint.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.EndPoint\\NetElites.EndPoint.csproj",
+        "projectName": "NetElites.EndPoint",
+        "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.EndPoint\\NetElites.EndPoint.csproj",
+        "packagesPath": "C:\\Users\\Hi tech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.EndPoint\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hi tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj"
+              },
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Infrastucture\\NetElites.Infrastucture.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Infrastucture\\NetElites.Infrastucture.csproj"
+              },
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Persentation\\NetElites.Persentation.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Persentation\\NetElites.Persentation.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Infrastucture\\NetElites.Infrastucture.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Infrastucture\\NetElites.Infrastucture.csproj",
+        "projectName": "NetElites.Infrastucture",
+        "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Infrastucture\\NetElites.Infrastucture.csproj",
+        "packagesPath": "C:\\Users\\Hi tech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Infrastucture\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hi tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.15.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Persentation\\NetElites.Persentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Persentation\\NetElites.Persentation.csproj",
+        "projectName": "NetElites.Persentation",
+        "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Persentation\\NetElites.Persentation.csproj",
+        "packagesPath": "C:\\Users\\Hi tech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Persentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hi tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Application\\NetElites.Application.csproj"
+              },
+              "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj": {
+                "projectPath": "C:\\Users\\Hi tech\\Desktop\\New folder (2)\\NetElites\\NetElites.Doamin\\NetElites.Doamin.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
