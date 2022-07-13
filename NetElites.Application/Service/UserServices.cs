@@ -34,21 +34,17 @@ namespace NetElites.Application.Service
             return null;
         }
 
-        public async Task<SmsDto> getCode(string mobileNumber)
+        public async Task<SmsCode> getCode(string mobileNumber)
         {
-            var smsCode = GenricCode.code();
+            var smsCode = GenricCode.smsCode();
             SmsCode sms = new SmsCode()
             {
                 Code = smsCode,
-                Created = DateTime.Now,
                 MobileNumber = mobileNumber,
-                RequertCount = 0,
-                Used = false
             };
             await _context.smsCodes.AddAsync(sms);
             await _context.SaveChangesAsync();
-            var smsDto = _mapper.Map<SmsDto>(sms);
-            return smsDto;
+            return sms;
         }
 
         public async Task<UserDto> getUser(string userId)
@@ -81,11 +77,6 @@ namespace NetElites.Application.Service
                     }
                     else
                     {
-                        var register = await registerUser(smsCode.MobileNumber);
-                        if(register != null)
-                        {
-                            return register;
-                        }
                         return null;
                     }
                 }
@@ -108,7 +99,7 @@ namespace NetElites.Application.Service
         public async Task<UserDto> registerUser(string mobileNumber)
         {
             var user = await findUserWithPhonenumber(mobileNumber);
-            if (user != null)
+            if (user == null)
             {
                 User newUser = new User
                 {

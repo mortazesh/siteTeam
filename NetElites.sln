@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32319.34
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comman", "Comman", "{9410F2DC-C779-46EA-B2C3-0AD3B8D71C2F}"
 EndProject
@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetElites.Infrastucture", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetElites.Persentation", "NetElites.Persentation\NetElites.Persentation.csproj", "{53201CFF-D3EF-4A10-9B6F-80835FAC0546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetElites.Static", "NetElites.Static\NetElites.Static.csproj", "{BEDFF621-4495-4E66-8CAC-70C36710484A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetElites.Static", "NetElites.Static\NetElites.Static.csproj", "{BEDFF621-4495-4E66-8CAC-70C36710484A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

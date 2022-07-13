@@ -21,6 +21,7 @@ namespace NetElites.EndPoint.Controllers
             _mapper = mapper;
         }
         [HttpGet]
+        [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             var aeticle = await _article.GetAllArticles();

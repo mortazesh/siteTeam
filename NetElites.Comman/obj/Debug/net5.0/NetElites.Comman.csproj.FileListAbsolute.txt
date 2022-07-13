@@ -22,3 +22,15 @@ C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Comman\obj\Debug\net
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Comman\obj\Debug\net5.0\refint\NetElites.Comman.dll
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.pdb
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Comman\obj\Debug\net5.0\ref\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\bin\Debug\net5.0\NetElites.Comman.deps.json
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\bin\Debug\net5.0\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\bin\Debug\net5.0\ref\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\bin\Debug\net5.0\NetElites.Comman.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.csproj.AssemblyReference.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.AssemblyInfoInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.AssemblyInfo.cs
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.csproj.CoreCompileInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\ref\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Comman\obj\Debug\net5.0\NetElites.Comman.pdb

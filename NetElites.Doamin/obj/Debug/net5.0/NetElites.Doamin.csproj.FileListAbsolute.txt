@@ -22,3 +22,15 @@ C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Doamin\obj\Debug\net
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Doamin\obj\Debug\net5.0\refint\NetElites.Doamin.dll
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.pdb
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Doamin\obj\Debug\net5.0\ref\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\bin\Debug\net5.0\NetElites.Doamin.deps.json
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\bin\Debug\net5.0\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\bin\Debug\net5.0\ref\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\bin\Debug\net5.0\NetElites.Doamin.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.csproj.AssemblyReference.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.AssemblyInfoInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.AssemblyInfo.cs
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.csproj.CoreCompileInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\ref\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Doamin\obj\Debug\net5.0\NetElites.Doamin.pdb

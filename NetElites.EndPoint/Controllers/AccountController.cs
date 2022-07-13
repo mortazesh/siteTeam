@@ -29,6 +29,9 @@ namespace NetElites.EndPoint.Controllers
         [Route("login")]
         public async Task<IActionResult> login([FromBody] LoginDto model)
         {
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Headers", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Methods", "*");
             if (ModelState.IsValid)
             {
                 var login = await _user.login(new UserDto
@@ -72,6 +75,11 @@ namespace NetElites.EndPoint.Controllers
                             }
                         });
              }
+                User nerUser = new User
+                {
+                    PhoneNumber = model.mobileNumber
+                };
+                await _userMnager.CreateAsync(nerUser, model.mobileNumber);
                 var user = await _user.findUserWithPhonenumber(model.mobileNumber);
                 await _token.Add(user.id);
                 return Ok(new ResponseDto
@@ -223,12 +231,15 @@ namespace NetElites.EndPoint.Controllers
         [Route("GetSmsCode")]
         public async Task<IActionResult> GetSmsCode(string mobileNumber)
         {
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Headers", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Methods", "*");
             var smsCode = await _user.getCode(mobileNumber);
             #region smsCode
             try
             {
-                string message = $"{smsCode.code}";
-                SmsService.Send(smsCode.mobileNumber, message);
+                string message = $"{smsCode.Code}";
+                SmsService.Send(smsCode.MobileNumber, message);
             }
             catch (Exception ex)
             {
@@ -236,7 +247,7 @@ namespace NetElites.EndPoint.Controllers
                 {
                     IsSccees = false,
                     ErrorMessage = ex.ToString(),
-                    Result = smsCode.code,
+                    Result = smsCode.Code,
                     links = new List<LinksDto>
                     {
                         new LinksDto

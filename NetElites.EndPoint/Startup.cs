@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NetElites.Application.Repository;
+using NetElites.Application.Service;
 using NetElites.Domain.Model.Users;
 using NetElites.EndPoint.Data;
 using NetElites.Infrastucture.MappingProfile;
@@ -67,6 +69,9 @@ namespace NetElites.EndPoint
             });
             #endregion
             #region Ioc
+            services.AddScoped<IUserRepository, UserServices>();
+            services.AddScoped<ITokenValidator, TokenValidate>();
+            services.AddScoped<ITokenRepositry, TokenServices>();
             services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
             services.AddScoped<IArticleRepository, ArticleService>();
             services.AddScoped<ICommentRepository, CommentService>();

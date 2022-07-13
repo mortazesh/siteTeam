@@ -8,7 +8,10 @@ namespace NetElites.Application.Dto.User
 {
     public class SmsDto
     {
-        public string mobileNumber { get; set; }
-        public string code { get; set; }
+        public string MobileNumber { get; set; }
+        public string Code { get; set; }
+        public bool Used { get; set; }
+        public DateTime Created { get; set; }
+        public int RequertCount { get; set; }
     }
 }

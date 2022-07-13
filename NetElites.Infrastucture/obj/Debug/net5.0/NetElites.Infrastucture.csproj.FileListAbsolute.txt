@@ -34,3 +34,22 @@ C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Infrastucture\obj\De
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Infrastucture\obj\Debug\net5.0\ref\NetElites.Infrastucture.dll
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Comman.dll
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Comman.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Infrastucture.deps.json
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Infrastucture.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\ref\NetElites.Infrastucture.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Infrastucture.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Application.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Application.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Comman.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\bin\Debug\net5.0\NetElites.Doamin.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.csproj.AssemblyReference.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.AssemblyInfoInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.AssemblyInfo.cs
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.csproj.CoreCompileInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.csproj.CopyComplete
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\ref\NetElites.Infrastucture.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Infrastucture\obj\Debug\net5.0\NetElites.Infrastucture.pdb

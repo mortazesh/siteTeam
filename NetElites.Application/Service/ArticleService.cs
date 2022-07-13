@@ -47,7 +47,6 @@ namespace NetElitres.Application.Service
             var article = await _context.articles.FindAsync(id);
             return article;
         }
-
         public async Task<IEnumerable<ArticlesDto>> GetAllArticles()
         {
             var articles = await _context.articles

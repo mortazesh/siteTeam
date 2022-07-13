@@ -90,7 +90,7 @@ namespace NetElites.Persentation.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MobileNumber = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
-                    Code = table.Column<string>(type: "nvarchar(6)", maxLength: 6, nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Used = table.Column<bool>(type: "bit", nullable: false),
                     Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     RequertCount = table.Column<int>(type: "int", nullable: false)

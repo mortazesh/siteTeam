@@ -20,14 +20,12 @@ namespace NetElites.Domain.Model.Users
         public string MobileNumber { get; set; }
         [Display(Name = "کد فعال سازی")]
         [Required(ErrorMessage = "وارد کردن {0} الزامی است")]
-        [MinLength(6, ErrorMessage = "{0} باید حداقل {1} کاراکتر باشد")]
-        [MaxLength(6, ErrorMessage = "{0} باید حداقل {1} کاراکتر باشد")]
         public string Code { get; set; }
         [Display(Name = "استفاده شده")]
-        public bool Used { get; set; }
+        public bool Used { get; set; } = false;
         [Display(Name = "تاریخ ثبت")]
-        public DateTime Created { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
         [Display(Name = "دفعات استفاده شده")]
-        public int RequertCount { get; set; }
+        public int RequertCount { get; set; } = 0;
     }
 }

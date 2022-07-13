@@ -10,7 +10,7 @@ using NetElites.EndPoint.Data;
 namespace NetElites.Persentation.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220615104845_init")]
+    [Migration("20220711182655_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -342,8 +342,7 @@ namespace NetElites.Persentation.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(6)
-                        .HasColumnType("nvarchar(6)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
@@ -565,7 +564,7 @@ namespace NetElites.Persentation.Migrations
                         .IsRequired();
 
                     b.HasOne("NetElites.Domain.Model.Users.User", "User")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("UserId");
 
                     b.HasOne("NetElites.Domain.Model.Worksamples.Worksample", "Worksample")
@@ -631,6 +630,8 @@ namespace NetElites.Persentation.Migrations
 
             modelBuilder.Entity("NetElites.Domain.Model.Users.User", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("Tokens");
                 });
 

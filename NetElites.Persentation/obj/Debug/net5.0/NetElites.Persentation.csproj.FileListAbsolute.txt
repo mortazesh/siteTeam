@@ -34,3 +34,22 @@ C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Persentation\obj\Deb
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Persentation\obj\Debug\net5.0\ref\NetElites.Persentation.dll
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Persentation\bin\Debug\net5.0\NetElites.Comman.dll
 C:\Users\Hi tech\Desktop\New folder (2)\NetElites\NetElites.Persentation\bin\Debug\net5.0\NetElites.Comman.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Persentation.deps.json
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Persentation.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\ref\NetElites.Persentation.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Persentation.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Application.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Comman.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Doamin.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Application.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Doamin.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\bin\Debug\net5.0\NetElites.Comman.pdb
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.csproj.AssemblyReference.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.AssemblyInfoInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.AssemblyInfo.cs
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.csproj.CoreCompileInputs.cache
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.csproj.CopyComplete
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\ref\NetElites.Persentation.dll
+C:\Users\morteza\Desktop\New folder (4)\teamback\siteTeam\NetElites.Persentation\obj\Debug\net5.0\NetElites.Persentation.pdb
