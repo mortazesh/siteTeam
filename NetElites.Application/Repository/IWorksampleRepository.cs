@@ -12,6 +12,7 @@ namespace NetElitres.Application.Repository
     {
         Task<WorksampleDto> GetWorksampleById(int id);
         Task<IEnumerable<WorksampleDto>> GetAllWorksample();
+        WorksampleDto GetWorksample();
         Task Add(AddWorksampleDto worksampleDto);
         Task<Worksample> FindWorksample(int id);
         Task<bool> Update(int id, WorksampleDto worksampleDto);

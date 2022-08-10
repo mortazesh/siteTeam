@@ -18,6 +18,48 @@ namespace NetElites.EndPoint.Controllers
             _worksample = worksample;
         }
         [HttpGet]
+        [Route("Get")]
+        public IActionResult Get()
+        {
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Headers", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Methods", "*");
+            var worksample = _worksample.GetWorksample();
+            if (worksample != null)
+            {
+                return Ok(new ResponseDto
+                {
+                    DisplayMessage = "عمیلات برگشت نمونه کارها با موفقبت انجام شد",
+                    IsSccees = true,
+                    Result = worksample,
+                    links = new List<LinksDto>
+                {
+                    new LinksDto
+                    {
+                        Href = "",
+                        Method = "",
+                        Rel = ""
+                    }
+                }
+                });
+            }
+            return Ok(new ResponseDto
+            {
+                DisplayMessage = "عمیلات برگشت نمونه کارها با موفقبت انجام نشد",
+                IsSccees = true,
+                Result = worksample,
+                links = new List<LinksDto>
+                {
+                    new LinksDto
+                    {
+                        Href = "",
+                        Method = "",
+                        Rel = ""
+                    }
+                }
+            });
+        }
+        [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var worksample = await _worksample.GetAllWorksample();

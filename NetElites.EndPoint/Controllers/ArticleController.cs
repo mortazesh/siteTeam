@@ -60,44 +60,58 @@ namespace NetElites.EndPoint.Controllers
             });
         }
         [HttpGet]
+        [Route("Get")]
         public async Task<IActionResult> Get([FromRoute]int id)
         {
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Headers", "*");
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Methods", "*");
             var article = await _article.GetArticleById(id);
-            return Ok(new ResponseDto
+            if (article != null)
             {
-                DisplayMessage = "عملیات برگشت مقاله با موفقیت انجام شد",
-                IsSccees = true,
-                Result = article,
-                links = new List<LinksDto>()
+                return Ok(new ResponseDto
                 {
-                    new LinksDto
+                    DisplayMessage = "عملیات برگشت مقاله با موفقیت انجام شد",
+                    IsSccees = true,
+                    Result = article,
+                    links = new List<LinksDto>()
                     {
-                        Href = "",
-                        Method = "GET",
-                        Rel = "GetAll"
-                    },
-                    new LinksDto
-                    {
-                        Href = "",
-                        Method = "POST",
-                        Rel = "Post"
-                    },
-                    new LinksDto
-                    {
-                        Href = "",
-                        Method = "PUT",
-                        Rel = "Put"
-                    },
-                    new LinksDto
-                    {
-                        Href = "",
-                        Method = "DELETE",
-                        Rel = "Delete"
+                        new LinksDto
+                        {
+                            Href = "",
+                            Method = "GET",
+                            Rel = "GetAll"
+                        },
+                        new LinksDto
+                        {
+                            Href = "",
+                            Method = "POST",
+                            Rel = "Post"
+                        },
+                        new LinksDto
+                        {
+                            Href = "",
+                            Method = "PUT",
+                            Rel = "Put"
+                        },
+                        new LinksDto
+                        {
+                            Href = "",
+                            Method = "DELETE",
+                            Rel = "Delete"
+                        }
                     }
-                }
+                });
+            }
+            return BadRequest(new ResponseDto
+            {
+                ErrorMessage = "چنین مقالاتی وجود ندارد",
+                IsSccees = false,
+                Result = null
             });
         }
         [HttpPost]
+        [Route("Post")]
         public async Task<IActionResult> Post([FromBody]AddArticlesDto model)
         {
             if (ModelState.IsValid)
@@ -145,6 +159,7 @@ namespace NetElites.EndPoint.Controllers
             return BadRequest(model);
         }
         [HttpPut]
+        [Route("Put")]
         public async Task<IActionResult> Put([FromRoute]int id,[FromBody]ArticlesDto model)
         {
             if (ModelState.IsValid)
@@ -190,6 +205,7 @@ namespace NetElites.EndPoint.Controllers
             return BadRequest(model);
         }
         [HttpDelete]
+        [Route("Delete")]
         public async Task<IActionResult> Delete([FromRoute]int id)
         {
             var article = await _article.Delete(id);

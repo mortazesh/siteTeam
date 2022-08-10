@@ -58,32 +58,28 @@ namespace NetElitres.Application.Service
                 .ToListAsync();
             return articles;
         }
-
         public async Task<ArticlesDto> GetArticleById(int id)
         {
             var article = await _context.articles.
                 Where(a => a.Id == id).
-                Include(a => a.Comments).
                 Include(a => a.Seo).
                 FirstOrDefaultAsync();
-            return new ArticlesDto
+            if (article != null)
             {
-                Author = article.Author,
-                Created = article.Created,
-                Description = article.Description,
-                comment = article.Comments.Select(comment => new CommentDto
+                return new ArticlesDto
                 {
-                    Created = comment.Created,
-                    Description = comment.Description,
-                    FullName = comment.FullName,
-                }).ToList(), 
-                seo = new SeoDto
-                {
-                    Description = article.Seo.Description,
-                    Title = article.Seo.Title,
-                    Created = article.Seo.Created,
-                }
-            };
+                    Author = article.Author,
+                    Created = article.Created,
+                    Description = article.Description,
+                    seo = new SeoDto
+                    {
+                        Description = article.Seo.Description,
+                        Title = article.Seo.Title,
+                        Created = article.Seo.Created,
+                    }
+                };
+            }
+            return null;
         }
 
         public async Task<bool> Update(int id, ArticlesDto articlesDto)

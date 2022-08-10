@@ -60,6 +60,19 @@ namespace NetElitres.Application.Service
             return worksample;
         }
 
+        public WorksampleDto GetWorksample()
+        {
+            var worksample = _context.worksamples
+                .Take(4)
+                .ToList();
+            if (worksample == null)
+            {
+                var worksampleDto = _mapper.Map<WorksampleDto>(worksample);
+                return worksampleDto;
+            }
+            return null;
+        }
+
         public async Task<WorksampleDto> GetWorksampleById(int id)
         {
             var worksample = await _context.articles.

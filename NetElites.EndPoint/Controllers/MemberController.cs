@@ -21,6 +21,7 @@ namespace NetElites.EndPoint.Controllers
             _mapper = mapper;
         }
         [HttpGet]
+        [Route("GetAll")]
         public async Task<IActionResult> GetAll()
         {
             var member = await _member.GetAllMember();
@@ -41,6 +42,7 @@ namespace NetElites.EndPoint.Controllers
             });
         }
         [HttpGet]
+        [Route("Get")]
         public async Task<IActionResult> Get([FromRoute] int id)
         {
             var member = await _member.GetMemberById(id);
