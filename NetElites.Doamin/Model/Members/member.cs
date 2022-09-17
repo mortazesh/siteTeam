@@ -1,4 +1,5 @@
-﻿using NetElites.Doamin.Model.Members;
+﻿using NetElites.Doamin.Model;
+using NetElites.Doamin.Model.Members;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -29,10 +30,17 @@ namespace NetElites.Domain.Model.Members
         [Display(Name = "عکس")]
         [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
         public string UrlImage { get; set; }
+        [Display(Name = "توضیح کوتاه عکس")]
+        [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
+        public string AltImage { get; set; }
+        [Display(Name = "توضیح عکس")]
+        [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
+        public string TitleImage { get; set; }
         [Display(Name = "زمان عضو کردن اعضا")]
         public DateTime Created { get; set; }
         #region Relations
         public virtual Seo Seo { get; set; }
+        public virtual ICollection<Tag> Tags { get; set; }
         public virtual ICollection<Skill> Skills { get; set; }
         #endregion
     }

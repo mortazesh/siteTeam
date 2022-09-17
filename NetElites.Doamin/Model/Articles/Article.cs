@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetElites.Doamin.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,6 +24,12 @@ namespace NetElites.Domain.Model.Articles
         [Display(Name = "عکس مقاله")]
         [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
         public string UrlImage { get; set; }
+        [Display(Name = "توضیح کوتاه عکس مقاله")]
+        [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
+        public string AltImage { get; set; }
+        [Display(Name = "توضیح عکس مقاله")]
+        [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
+        public string TitleImage { get; set; }
         [Display(Name = "نویسنده مقاله")]
         [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
         [MinLength(3, ErrorMessage = "{0} نباید از {1} کارکتر کمتر باشد")]
@@ -32,16 +39,11 @@ namespace NetElites.Domain.Model.Articles
         public DateTime Created { get; set; }
         [Display(Name = "سطح مقاله")]
         [Required(ErrorMessage = " {0} را لطفا وارد کنید")]
-        public Level Level { get; set; }
+        public string Level { get; set; }
         #region Relations
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual Seo Seo { get; set; }
+        public virtual ICollection<Tag> Tags { get; set; }
         #endregion
-    }
-    public enum Level
-    {
-        Easy = 0,
-        Medium = 1,
-        Hard = 2,
     }
 }

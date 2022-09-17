@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using NetElites.Doamin.Model;
+using NetElites.Doamin.Model.Context;
+using NetElites.Doamin.Model.Counseling;
 using NetElites.Doamin.Model.Members;
+using NetElites.Doamin.Model.Worksamples;
 using NetElites.Domain.Model;
 using NetElites.Domain.Model.Articles;
 using NetElites.Domain.Model.Members;
@@ -29,5 +33,9 @@ namespace NetElites.EndPoint.Data
         public DbSet<Member> members { get; set; }
         public DbSet<Worksample> worksamples { get; set; }
         public DbSet<Skill> skills { set; get; }
+        public DbSet<Context> contexts { set; get; }
+        public DbSet<Counseling> counselings { get; set; }
+        public DbSet<Tag> tags { get; set; }
+        public DbSet<UsedWorksample> usedWorksamples { get; set; }
     }
 }

@@ -1,6 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using NetElites.Doamin.Model;
+using NetElites.Doamin.Model.Context;
+using NetElites.Doamin.Model.Counseling;
 using NetElites.Doamin.Model.Members;
+using NetElites.Doamin.Model.Worksamples;
 using NetElites.Domain.Model;
 using NetElites.Domain.Model.Articles;
 using NetElites.Domain.Model.Members;
@@ -27,6 +31,10 @@ namespace NetElitres.Application.Repository
         public DbSet<Member> members { set; get; }
         public DbSet<Worksample> worksamples { get; set; }
         public DbSet<Skill> skills { set; get; }
+        public DbSet<Context> contexts { set; get; }
+        public DbSet<Counseling> counselings { get; set; }
+        public DbSet<Tag> tags { get; set; }
+        public DbSet<UsedWorksample> usedWorksamples { get; set; }
         int SaveChanges();
         int SaveChanges(bool acceptAllChangesOnSuccess);
         Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default);

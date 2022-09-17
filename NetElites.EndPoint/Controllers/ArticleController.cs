@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NetElites.Infrastucture.CustomHeader;
 using NetElitres.Application.Dto.Article;
 using NetElitres.Application.Dto.Response;
 using NetElitres.Application.Repository;
@@ -11,6 +12,7 @@ namespace NetElites.EndPoint.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [CustomHeader]
     public class ArticleController : ControllerBase
     {
         private readonly IArticleRepository _article;
@@ -34,25 +36,25 @@ namespace NetElites.EndPoint.Controllers
                 {
                     new LinksDto
                     {
-                        Href = "",
+                        Href = "/api/Article/GetById",
                         Method = "GET",
                         Rel = "GetById"
                     },
                     new LinksDto
                     {
-                        Href = "",
+                        Href = "/api/Article/Post",
                         Method = "POST",
                         Rel = "Post"
                     },
                     new LinksDto
                     {
-                        Href = "",
+                        Href = "/api/Article/Put",
                         Method = "PUT",
                         Rel = "Put"
                     },
                     new LinksDto
                     {
-                        Href = "",
+                        Href = "/api/Article/Delete",
                         Method = "DELETE",
                         Rel = "Delete"
                     }
@@ -60,12 +62,9 @@ namespace NetElites.EndPoint.Controllers
             });
         }
         [HttpGet]
-        [Route("Get")]
-        public async Task<IActionResult> Get([FromRoute]int id)
+        [Route("Get/id")]
+        public async Task<IActionResult> Get(int id)
         {
-            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            HttpContext.Response.Headers.Add("Access-Control-Allow-Headers", "*");
-            HttpContext.Response.Headers.Add("Access-Control-Allow-Methods", "*");
             var article = await _article.GetArticleById(id);
             if (article != null)
             {
@@ -78,32 +77,32 @@ namespace NetElites.EndPoint.Controllers
                     {
                         new LinksDto
                         {
-                            Href = "",
+                            Href = "/api/Article/Get",
                             Method = "GET",
-                            Rel = "GetAll"
+                            Rel = "Get"
                         },
                         new LinksDto
                         {
-                            Href = "",
+                            Href = "/api/Article/Post",
                             Method = "POST",
                             Rel = "Post"
                         },
                         new LinksDto
                         {
-                            Href = "",
+                            Href = "/api/Article/Put",
                             Method = "PUT",
                             Rel = "Put"
                         },
                         new LinksDto
                         {
-                            Href = "",
+                            Href = "/api/Article/Delete",
                             Method = "DELETE",
                             Rel = "Delete"
                         }
                     }
                 });
             }
-            return BadRequest(new ResponseDto
+            return NotFound(new ResponseDto
             {
                 ErrorMessage = "چنین مقالاتی وجود ندارد",
                 IsSccees = false,

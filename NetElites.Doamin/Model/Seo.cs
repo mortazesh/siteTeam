@@ -26,9 +26,9 @@ namespace NetElites.Domain.Model
         public string Description { get; set; }
         [Display(Name = "زمان انتشار ")]
         public DateTime Created { get; set; }
-        public int ArticleId { get; set; }
-        public int MemberId { get; set; }
-        public int WorksampleId { get; set; }
+        public int? ArticleId { get; set; }
+        public int? MemberId { get; set; }
+        public int? WorksampleId { get; set; }
         #region Relations
         public virtual Article Article { get; set; }
         public virtual Member Member { get; set; }

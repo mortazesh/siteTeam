@@ -13,6 +13,6 @@ namespace NetElitres.Application.Dto.Article
         public string UrlImage { get; set; }
         public string Author { get; set; }
         public DateTime Created { get; set; }
-        public Level Level { get; set; }
+        public string Level { get; set; }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using NetElites.Application.Dto.Tag;
+using NetElites.Application.Dto.UsedWorksample;
 using NetElites.Domain.Model.Worksamples;
 using NetElitres.Application.Dto.Comment;
 using NetElitres.Application.Dto.Seo;
@@ -50,11 +52,16 @@ namespace NetElitres.Application.Service
         public async Task<IEnumerable<WorksampleDto>> GetAllWorksample()
         {
             var worksample = await _context.worksamples
+                .Include(worksample => worksample.UsedWorksamples)
                 .Select(worksample => new WorksampleDto
                 {
+                    Id = worksample.Id,
                     Title = worksample.Title,
-                    //type
                     Description = worksample.Description,
+                    usedWorksamples = worksample.UsedWorksamples.Select(u => new UsedWorksampleDto
+                    {
+                        name = u.Name
+                    }).ToList()
                 })
                 .ToListAsync();
             return worksample;
@@ -63,7 +70,7 @@ namespace NetElitres.Application.Service
         public WorksampleDto GetWorksample()
         {
             var worksample = _context.worksamples
-                .Take(4)
+                .Take(8)
                 .ToList();
             if (worksample == null)
             {
@@ -75,31 +82,39 @@ namespace NetElitres.Application.Service
 
         public async Task<WorksampleDto> GetWorksampleById(int id)
         {
-            var worksample = await _context.articles.
+            var worksample = await _context.worksamples.
                 Where(a => a.Id == id).
-                Include(a => a.Comments).
-                Include(a => a.Seo).
+                Include(w => w.UsedWorksamples).
+                Include(w => w.Seo).
+                Include(w => w.Tags).
                 FirstOrDefaultAsync();
-            return new WorksampleDto
+            if (worksample != null)
             {
-                Created = worksample.Created,
-                Description = worksample.Description,
-                // type
-                Title = worksample.Title,
-                UriImage = worksample.UrlImage,
-                comment = worksample.Comments.Select(comment => new CommentDto
+                return new WorksampleDto
                 {
-                    Created = comment.Created,
-                    Description = comment.Description,
-                    FullName = comment.FullName,
-                }).ToList(),
-                seo = new SeoDto
-                {
-                    Description = worksample.Seo.Description,
-                    Title = worksample.Seo.Title,
-                    Created = worksample.Seo.Created,
-                }
-            };
+                    Created = worksample.Created,
+                    Description = worksample.Description,
+                    Title = worksample.Title,
+                    UriImage = worksample.UriImage,
+                    AltImage = worksample.AltImage,
+                    TitleImage = worksample.TitleImage,
+                    tags = worksample.Tags.Select(t => new TagDto
+                    {
+                        name = t.Name
+                    }).ToList(),
+                    usedWorksamples = worksample.Tags.Select(u => new UsedWorksampleDto
+                    {
+                        name = u.Name
+                    }).ToList(),
+                    seo = new SeoDto
+                    {
+                        Description = worksample.Seo.Description,
+                        Title = worksample.Seo.Title,
+                        Created = worksample.Seo.Created,
+                    }
+                };
+            }
+            return null;
         }
 
         public async Task<bool> Update(int id, WorksampleDto worksampleDto)

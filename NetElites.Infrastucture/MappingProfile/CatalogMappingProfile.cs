@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using NetElites.Application.Dto.Context;
+using NetElites.Doamin.Model.Context;
 using NetElites.Domain.Model;
 using NetElites.Domain.Model.Articles;
 using NetElites.Domain.Model.Members;
@@ -28,6 +30,8 @@ namespace NetElites.Infrastucture.MappingProfile
             CreateMap<Seo, SeoDto>().ReverseMap();
             CreateMap<Worksample, AddWorksampleDto>().ReverseMap();
             CreateMap<Worksample, WorksampleDto>().ReverseMap();
+            CreateMap<Context, AddContextDto>().ReverseMap();
+            CreateMap<Context, ContextDto>().ReverseMap();
         }
     }
 }

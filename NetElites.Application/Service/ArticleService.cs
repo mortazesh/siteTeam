@@ -10,6 +10,7 @@ using AutoMapper;
 using NetElitres.Application.Dto.Comment;
 using NetElitres.Application.Dto.Seo;
 using NetElites.Domain.Model.Articles;
+using NetElites.Application.Dto.Tag;
 
 namespace NetElitres.Application.Service
 {
@@ -52,8 +53,11 @@ namespace NetElitres.Application.Service
             var articles = await _context.articles
                 .Select(article => new ArticlesDto
                 {
+                    Id = article.Id,
                     Title = article.Title,
                     Description = article.Description,
+                    Author = article.Author,
+                    UrlImage = article.UrlImage
                 })
                 .ToListAsync();
             return articles;
@@ -63,11 +67,18 @@ namespace NetElitres.Application.Service
             var article = await _context.articles.
                 Where(a => a.Id == id).
                 Include(a => a.Seo).
+                Include(a => a.Tags).
                 FirstOrDefaultAsync();
             if (article != null)
             {
                 return new ArticlesDto
                 {
+                    Id = article.Id,
+                    Title = article.Title,
+                    Level = article.Level,
+                    UrlImage = article.UrlImage,
+                    AltImage = article.AltImage,
+                    TitleImage = article.TitleImage,
                     Author = article.Author,
                     Created = article.Created,
                     Description = article.Description,
@@ -76,7 +87,11 @@ namespace NetElitres.Application.Service
                         Description = article.Seo.Description,
                         Title = article.Seo.Title,
                         Created = article.Seo.Created,
-                    }
+                    },
+                    tags = article.Tags.Select(t => new TagDto
+                    {
+                        name = t.Name
+                    }).ToList()
                 };
             }
             return null;

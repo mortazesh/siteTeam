@@ -123,6 +123,62 @@ namespace NetElites.Persentation.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("NetElites.Doamin.Model.Context.Context", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Application")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("contexts");
+                });
+
+            modelBuilder.Entity("NetElites.Doamin.Model.Counseling.Counseling", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Application")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("counselings");
+                });
+
             modelBuilder.Entity("NetElites.Doamin.Model.Members.Skill", b =>
                 {
                     b.Property<int>("Id")
@@ -150,12 +206,68 @@ namespace NetElites.Persentation.Migrations
                     b.ToTable("skills");
                 });
 
+            modelBuilder.Entity("NetElites.Doamin.Model.Tag", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("ArticleId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MemberId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("WorksampleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("ArticleId");
+
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("WorksampleId");
+
+                    b.ToTable("tags");
+                });
+
+            modelBuilder.Entity("NetElites.Doamin.Model.Worksamples.UsedWorksample", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WorksampleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("WorksampleId");
+
+                    b.ToTable("usedWorksamples");
+                });
+
             modelBuilder.Entity("NetElites.Domain.Model.Articles.Article", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AltImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Author")
                         .IsRequired()
@@ -169,13 +281,18 @@ namespace NetElites.Persentation.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Level")
-                        .HasColumnType("int");
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("TitleImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlImage")
                         .IsRequired()
@@ -265,7 +382,7 @@ namespace NetElites.Persentation.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ArticleId")
+                    b.Property<int?>("ArticleId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Created")
@@ -276,7 +393,7 @@ namespace NetElites.Persentation.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<int>("MemberId")
+                    b.Property<int?>("MemberId")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -284,19 +401,22 @@ namespace NetElites.Persentation.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<int>("WorksampleId")
+                    b.Property<int?>("WorksampleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ArticleId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[ArticleId] IS NOT NULL");
 
                     b.HasIndex("MemberId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[MemberId] IS NOT NULL");
 
                     b.HasIndex("WorksampleId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[WorksampleId] IS NOT NULL");
 
                     b.ToTable("seos");
                 });
@@ -465,6 +585,10 @@ namespace NetElites.Persentation.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("AltImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
@@ -477,10 +601,9 @@ namespace NetElites.Persentation.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Type")
+                    b.Property<string>("TitleImage")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UriImage")
                         .IsRequired()
@@ -553,6 +676,38 @@ namespace NetElites.Persentation.Migrations
                     b.Navigation("Member");
                 });
 
+            modelBuilder.Entity("NetElites.Doamin.Model.Tag", b =>
+                {
+                    b.HasOne("NetElites.Domain.Model.Articles.Article", "Article")
+                        .WithMany("Tags")
+                        .HasForeignKey("ArticleId");
+
+                    b.HasOne("NetElites.Domain.Model.Members.Member", "Member")
+                        .WithMany("Tags")
+                        .HasForeignKey("MemberId");
+
+                    b.HasOne("NetElites.Domain.Model.Worksamples.Worksample", "Worksample")
+                        .WithMany("Tags")
+                        .HasForeignKey("WorksampleId");
+
+                    b.Navigation("Article");
+
+                    b.Navigation("Member");
+
+                    b.Navigation("Worksample");
+                });
+
+            modelBuilder.Entity("NetElites.Doamin.Model.Worksamples.UsedWorksample", b =>
+                {
+                    b.HasOne("NetElites.Domain.Model.Worksamples.Worksample", "Worksamples")
+                        .WithMany("UsedWorksamples")
+                        .HasForeignKey("WorksampleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Worksamples");
+                });
+
             modelBuilder.Entity("NetElites.Domain.Model.Comment", b =>
                 {
                     b.HasOne("NetElites.Domain.Model.Articles.Article", "Article")
@@ -580,21 +735,15 @@ namespace NetElites.Persentation.Migrations
                 {
                     b.HasOne("NetElites.Domain.Model.Articles.Article", "Article")
                         .WithOne("Seo")
-                        .HasForeignKey("NetElites.Domain.Model.Seo", "ArticleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NetElites.Domain.Model.Seo", "ArticleId");
 
                     b.HasOne("NetElites.Domain.Model.Members.Member", "Member")
                         .WithOne("Seo")
-                        .HasForeignKey("NetElites.Domain.Model.Seo", "MemberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NetElites.Domain.Model.Seo", "MemberId");
 
                     b.HasOne("NetElites.Domain.Model.Worksamples.Worksample", "Worksample")
                         .WithOne("Seo")
-                        .HasForeignKey("NetElites.Domain.Model.Seo", "WorksampleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("NetElites.Domain.Model.Seo", "WorksampleId");
 
                     b.Navigation("Article");
 
@@ -617,6 +766,8 @@ namespace NetElites.Persentation.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Seo");
+
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("NetElites.Domain.Model.Members.Member", b =>
@@ -624,6 +775,8 @@ namespace NetElites.Persentation.Migrations
                     b.Navigation("Seo");
 
                     b.Navigation("Skills");
+
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("NetElites.Domain.Model.Users.User", b =>
@@ -638,6 +791,10 @@ namespace NetElites.Persentation.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Seo");
+
+                    b.Navigation("Tags");
+
+                    b.Navigation("UsedWorksamples");
                 });
 #pragma warning restore 612, 618
         }
